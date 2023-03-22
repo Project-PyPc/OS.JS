@@ -51,6 +51,7 @@ import {
 import {PanelServiceProvider} from '@osjs/panels';
 import {GUIServiceProvider} from '@osjs/gui';
 import {DialogServiceProvider} from '@osjs/dialogs';
+import {WidgetServiceProvider} from '@osjs/widgets';
 import config from './config.js';
 import './index.scss';
 
@@ -64,6 +65,7 @@ const init = () => {
   osjs.register(NotificationServiceProvider);
   osjs.register(SettingsServiceProvider, {before: true});
   osjs.register(AuthServiceProvider, {before: true});
+  osjs.register(WidgetServiceProvider);
   osjs.register(PanelServiceProvider);
   osjs.register(DialogServiceProvider);
   osjs.register(GUIServiceProvider);
